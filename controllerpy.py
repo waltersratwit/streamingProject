@@ -20,9 +20,12 @@ ssrelation.addSim("comedy",11)
 
 # print(sbrelation.getTitles())
 print(title1.getRelations())
+print()
 print(title2.getRelations())
+print()
 print(title3.getRelations())
 print()
-
+print(title1.relatedTitles)
+print()
 print(sbrelation.getAvgSim())
 print(sbrelation.getTotalSim())

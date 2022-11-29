@@ -15,9 +15,14 @@ class Title:
         self.tags = tags #will pull from service
         self.image = "file path for image" #will pull from service
         self.relations = []
+        self.relatedTitles = []
     
     def addRelation(self, relation):
         self.relations.append(relation)
+        if (relation.getTitles()[0] is self.name):
+            self.relatedTitles.append(relation.getTitles()[1])
+        else:
+            self.relatedTitles.append(relation.getTitles()[0])
         self.relations.sort(key=lambda x: x.getTotalSim())
         
     def getName(self):
@@ -27,7 +32,7 @@ class Title:
         output = []
         for x in self.relations:
             titles = x.getTitles()
-            print(titles)
+            # print(titles)
             if (titles[0] is self.name):
                 output.append((titles[1],x.getAvgSim()))
             else:
