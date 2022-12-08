@@ -9,11 +9,14 @@ Created on Mon Nov 28 22:08:04 2022
 class Title:
     
 
-    def __init__(self, name, tags):
+    def __init__(self, name, rating, tags, image):
         self.name = name
-        self.rating = 5 #will pull from service
-        self.tags = tags #will pull from service
-        self.image = "file path for image" #will pull from service
+        self.rating = rating
+        # print(self.rating)
+        self.tags = tags
+        # print(self.tags)
+        self.image = image
+        # print(self.image)
         self.relations = []
         self.relatedTitles = []
     
@@ -38,3 +41,6 @@ class Title:
             else:
                 output.append((titles[0],x.getAvgSim()))
         return output
+    
+    def getTags(self):
+        return self.tags

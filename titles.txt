@@ -1,0 +1,8 @@
+superman
+5
+comedy action
+superman.jpg
+batman
+5
+comedy action fun
+batman.jpg

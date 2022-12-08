@@ -17,7 +17,7 @@ class Relation:
         self.title2 = title2
         self.similarityList = similarityList
         # print(similarityList)
-        # print(self.similarityList)
+        print(self.similarityList)
         self.avgSim = {}
         for tag in self.similarityList:
             self.avgSim[tag] = sum(self.similarityList[tag])/len(self.similarityList[tag])
@@ -33,6 +33,7 @@ class Relation:
         self.similarityList[tag]=valueList
         self.avgSim[tag]=sum(valueList)/len(valueList)
         self.updateTotalSim()
+        # print(self.similarityList)
 
     def updateTotalSim(self):
         top1=0
