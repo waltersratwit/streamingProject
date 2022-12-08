@@ -18,6 +18,7 @@ class Title:
         self.image = image
         # print(self.image)
         self.relations = []
+        # print(self.relations)
         self.relatedTitles = []
     
     def addRelation(self, relation):
@@ -26,8 +27,11 @@ class Title:
             self.relatedTitles.append(relation.getTitles()[1])
         else:
             self.relatedTitles.append(relation.getTitles()[0])
-        self.relations.sort(key=lambda x: x.getTotalSim())
+        self.sortRelations()
         
+    def sortRelations(self):
+        self.relations.sort(key=lambda x: x.getTotalSim(), reverse=True)
+
     def getName(self):
         return self.name
     

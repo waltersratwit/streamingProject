@@ -16,12 +16,14 @@ sbrelation = relation.Relation(title1, title2, {"comedy":[5],"action":[3]})
 ssrelation = relation.Relation(title2, title3, {"comedy":[1],"fun":[5]})
 # print(ssrelation)
 
-sbrelation.addSim("comedy",11)
+# print(title2.getRelations())
 
-print(sbrelation.getTitles())
+ssrelation.addSim("comedy",11)
+
+# print(sbrelation.getTitles())
 # print(title1.getRelations())
 # print()
-# print(title2.getRelations())
+print(title2.getRelations())
 # print()
 # print(title3.getRelations())
 # print()
